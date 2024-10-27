@@ -7,7 +7,7 @@ app = FastAPI()
 # CORS Middleware Setup
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost", "http://localhost:5174","http://localhost:5173"],  # Specify allowed origins
+    allow_origins=["*"],  # Allows all origins
     allow_credentials=True,
     allow_methods=["*"],  # Allows all methods
     allow_headers=["*"],  # Allows all headers
@@ -15,7 +15,7 @@ app.add_middleware(
 
 @app.get('/')
 def root():
-    return {'hello': 'Suraj!'}
+    return {'hello': 'Coders Welcome to the API Created by Suraj Singh U '}
 
 
 @app.post('/getdata')
